@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Chart from './components/cryptochart.js';
+
 
 class App extends React.Component {
   constructor(){
@@ -8,7 +10,8 @@ class App extends React.Component {
 
   render(){
     return (<div>
-              Hello World!
+              <h1> Crypto Currency Chart! </h1>
+              <Chart />
             </div>)
   }
 }

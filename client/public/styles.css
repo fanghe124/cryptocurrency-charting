@@ -1,0 +1,9 @@
+body{
+  background-color: #7a5fff;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+.chartjs-render-monitor{
+  background-color: white
+}
