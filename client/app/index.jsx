@@ -2,10 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Chart from './components/cryptochart.js';
 
-
 class App extends React.Component {
   constructor(){
     super();
+    this.state = {
+      data: []
+    }
   }
 
   render(){

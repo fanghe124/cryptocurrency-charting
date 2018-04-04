@@ -9,7 +9,7 @@ const Chart = (props)=>{
     datasets: [
       {
         label: 'My First dataset',
-        fill: true,
+        fill: false,
         lineTension: 0.1,
         backgroundColor: 'rgba(255,127,80,1)',
         borderColor: 'rgba(75,192,192,1)',
@@ -27,6 +27,11 @@ const Chart = (props)=>{
         pointRadius: 1,
         pointHitRadius: 10,
         data: [65, 59, 80, 81, 56, 55, 40]
+      },
+      { 
+        fill: false,
+        data: [100, 30, 2, 44, 11, 80, 140]
+
       }
     ]
   };
