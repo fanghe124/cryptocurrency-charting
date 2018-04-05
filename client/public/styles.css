@@ -7,3 +7,19 @@ body{
 .chartjs-render-monitor{
   background-color: white
 }
+
+.input{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border: solid 2px;
+  border-color: orange;
+  border-radius: 5px;
+  align-items: center;
+  margin: 5px;
+  padding: 10px;
+}
+
+input{
+  margin-left: 10px;
+}
