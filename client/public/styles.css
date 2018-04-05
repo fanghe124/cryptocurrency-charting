@@ -23,3 +23,28 @@ body{
 input{
   margin-left: 10px;
 }
+
+
+.button{
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+
+}
+.submit{
+  background-color: white;
+  border: none;
+  color: #7a5fff;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  font-size: 16px;
+  width: auto;
+}
+
+.submit:hover{
+  background-color: orange;
+  color: white;
+  cursor: pointer;
+}

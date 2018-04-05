@@ -5,7 +5,7 @@ const Chart = (props)=>{
 
   const chartTitle = `Crypto Chart`;
   const data = {
-    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    labels: props.labels,
     datasets: [
       {
         label: 'My First dataset',
@@ -26,18 +26,13 @@ const Chart = (props)=>{
         pointHoverBorderWidth: 2,
         pointRadius: 1,
         pointHitRadius: 10,
-        data: [65, 59, 80, 81, 56, 55, 40]
+        data: props.data
       },
-      { 
-        fill: false,
-        data: [100, 30, 2, 44, 11, 80, 140]
-
-      }
     ]
   };
 
   return (<div>
-            <h2>{chartTitle}</h2>
+            {props.exchange.length > 3  && <h2>{`${props.crypto} / ${props.currency} (${props.exchange})`}</h2>}
             <Line data={data}/>
           </div>)
 

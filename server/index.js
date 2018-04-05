@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
 const router = require('./router.js')
+const morgan = require('morgan');
+
+app.use(morgan('dev'));
 
 app.use(express.static('./client/public'));
 

@@ -8,23 +8,27 @@ router.get('/prices', (req, res)=>{
   
   const cryptoId = req.query.crypto || 'BTC';
   const currencyId = req.query.currency || 'USD';
-  const date = req.query.date || Date.now();
-
+  const exchange = req.query.exchange || 'COINBASE';
   const config = {
-    url: `https://rest.coinapi.io/v1/exchangerate/${cryptoId}/${currencyId}`,
+    url: `https://rest.coinapi.io/v1/ohlcv/${exchange}_SPOT_${cryptoId}_${currencyId}/latest`,
     method: 'get',
     headers: {
       'X-CoinAPI-Key': process.env.API_KEY
     },
     params:{
-      time: date
+      period_id: '1MTH'
     }
   }
 
   axios(config)
-  .then((response)=>res.send(response.data));
+  .then((response)=>{
+    console.log('Remaining Number of Requests', response.headers['x-ratelimit-remaining']);
+    res.send(response.data)
+  })
+  .catch((error)=>res.send(error.data));
 
 })
 
 
 module.exports = router;
+
