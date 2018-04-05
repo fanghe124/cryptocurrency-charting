@@ -8,7 +8,7 @@ const Chart = (props)=>{
     labels: props.labels,
     datasets: [
       {
-        label: 'My First dataset',
+        label: `${props.crypto} / ${props.currency} (${props.exchange})`,
         fill: false,
         lineTension: 0.1,
         backgroundColor: 'rgba(255,127,80,1)',
@@ -32,8 +32,7 @@ const Chart = (props)=>{
   };
 
   return (<div>
-            {props.exchange.length > 3  && <h2>{`${props.crypto} / ${props.currency} (${props.exchange})`}</h2>}
-            <Line data={data}/>
+            <Line data={data} width={500} height={500} options={{ maintainAspectRatio: false}}/>
           </div>)
 
 }

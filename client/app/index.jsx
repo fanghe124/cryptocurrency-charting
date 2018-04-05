@@ -10,10 +10,14 @@ class App extends React.Component {
     this.state = {
       prices: [],
       dates: [],
-      crypto: '',
-      currency: '',
-      exchange: ''
+      crypto: 'ETH',
+      currency: 'USD',
+      exchange: 'COINBASE'
     }
+  }
+
+  componentWillMount(){
+    this.fetchData()
   }
 
   handleChange(event, type) {
