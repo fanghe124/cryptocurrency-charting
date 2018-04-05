@@ -6,9 +6,9 @@ require('dotenv').load();
 //Route to fetch prices from Cache and/or live CoinAPI.io
 router.get('/prices', (req, res)=>{
   
-  const cryptoId = req.query.crypto || 'BTC';
-  const currencyId = req.query.currency || 'USD';
-  const exchange = req.query.exchange || 'COINBASE';
+  const cryptoId = req.query.crypto || 'ETH';
+  const currencyId = req.query.currency || 'USDT';
+  const exchange = req.query.exchange || 'BINANCE';
   const config = {
     url: `https://rest.coinapi.io/v1/ohlcv/${exchange}_SPOT_${cryptoId}_${currencyId}/latest`,
     method: 'get',

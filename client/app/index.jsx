@@ -48,8 +48,8 @@ class App extends React.Component {
       const prices = response.data.map((element)=>element.price_close);
       const dates = response.data.map((element)=>element.time_period_start.substr(0,10));
       this.setState({
-        prices:prices,
-        dates: dates
+        prices:prices.reverse(),
+        dates: dates.reverse()
       });
     })
     .catch(error=>console.log(error))
